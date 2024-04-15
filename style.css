@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/*Analogous Colour Scheme
+Red = #FF0000
+Scarlet = #FF2D00
+Orange = #FF5900
+Sunset Orange = #FF5555
+Light Orange = #FFEEE5
+Additional:
+White = #FFFAFA
+Black = #111111 
+*/
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem; /*mobile view*/
+  background-color: #ffeee5;
+  line-height: 1.5;
+  margin: 2rem;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: #ff0000;
+}
+
+.masthead {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.masthead h2 {
+  text-align: center;
+  color: #ff5900;
+  padding: 1rem;
+}
+
+/********************** Header Styles **************************/
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.logo img {
+  width: 8rem;
+}
+/********************** Navigation Styles **************************/
+nav {
+  background-color: #ff0000;
+  text-align: center;
+  border-radius: 10px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+nav li {
+  font-weight: 600;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #fffafa;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #ff5555;
+}
+
+/********************** Main Styles **************************/
+
+/****** Articles *******/
+
+article {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+article h2 {
+  text-align: center;
+  color: #ff0000;
+}
+
+article figure {
+  margin: 1rem auto;
+}
+
+article figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+article p {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+/****** Portfolio Cards *******/
+
+#port-title {
+  text-align: center;
+}
+
+.portfolio-card {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.portfolio-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.portfolio-card h3 {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/********************** Footer Styles **************************/
+
+footer {
+  background-color: #ff0000;
+  color: #fffafa;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-media li {
+  margin: 0 0.5rem;
+}
+
+.social-media a {
+  color: #fffafa;
+  font-size: 2rem;
+}
+
+.social-media a:hover {
+  color: #ff5900;
+}
+
+/**************** Responsive Design *****************/
+
+/**************** 35rem < Tablet View < 80rem *****************/
+
+@media (min-width: 35rem) and (max-width: 79.9rem) {
+  body {
+    font-size: 1rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    margin: 0.5rem;
+  }
+
+  .masthead {
+    width: 100%;
+    background-image: url(../img/masthead.jpg);
+    /*https://www.freeimages.com/photo/red-photos-1198380*/
+    order: 3;
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  .masthead h2 {
+    text-align: center;
+    color: #fffafa;
+    padding: 1rem;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  /** Nav **/
+
+  nav {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+  }
+
+  nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  nav li {
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+  }
+
+  /** Articles **/
+
+  article {
+    max-width: 90%;
+  }
+
+  article h2 {
+    width: 100%;
+  }
+
+  figure {
+    max-width: 40%;
+    float: left;
+    padding: 1.5rem;
+  }
+
+  /** Portfolio **/
+  .portfolio-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .portfolio-card {
+    flex: 0 0 calc(50% - 40px); /* 2 cards per row */
+  }
+
+  /** Footer **/
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+/**************** Desktop View > 80rem *****************/
+
+@media (min-width: 80rem) {
+  body {
+    font-size: 1.25rem;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .masthead {
+    display: flex;
+    justify-content: flex-start;
+    background-image: url(../img/masthead.jpg);
+    order: 3;
+    flex: 0 0 100%;
+    margin: 1rem 0;
+    border-radius: 10px;
+  }
+
+  .masthead h2 {
+    text-align: left;
+    color: #fffafa;
+    padding: 0 0 1rem 5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .logo {
+    order: 1;
+    flex: 0 0 20%;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  /** Nav **/
+
+  nav {
+    order: 2;
+    flex: 0 0 20%;
+  }
+
+  nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  /** Articles **/
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+  }
+
+  article h2 {
+    width: 100%;
+    text-align: left;
+    margin-left: 2rem;
+  }
+
+  figure {
+    flex: 0 0 calc(40% - 4rem);
+    margin: 2rem;
+    float: left;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+
+  p {
+    flex: 0 0 60%;
+    margin: 0;
+  }
+
+  p + hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid #333;
+  }
+
+  /** Portfolio **/
+
+  #port-title {
+    text-align: left;
+    margin-left: 10rem;
+  }
+
+  .portfolio-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 8.5rem;
+  }
+
+  .portfolio-card {
+    flex: 0 0 calc(33.33% - 40px); /* 3 cards per row */
+  }
+
+  /** Footer **/
+
+  footer {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+  }
+}
